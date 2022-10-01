@@ -70,7 +70,6 @@ const Home = () => {
               </Box>
 
               <Button
-
                 onClick={() => addItemToCheckout(product.variants[0].id, 1)}
                 _hover={{ opacity: "70%" }}
                 w="14rem"

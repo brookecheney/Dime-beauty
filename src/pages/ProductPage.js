@@ -28,9 +28,6 @@ const ProductPage = () => {
         <Flex justifyContent="center" alignItems="center">
           <Image src={product.images[0].src} />
         </Flex>
-
-
-
         <Flex
           flexDirection="column"
           alignItems="center"
