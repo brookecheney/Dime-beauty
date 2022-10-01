@@ -11,7 +11,7 @@ function Footer() {
             <h1 class="h1-1">Add $100 to save 10%</h1>
           <div class="push">
 
-            <Image src={myImage} />
+            <Image src={myImage} class="image" />
           </div>
           </div>
       <footer class="footer"></footer>
