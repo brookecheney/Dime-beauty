@@ -29,9 +29,7 @@ const Home = () => {
   return (
     <body>
   <main>
-    <Box p="1rem">
-            
-           
+    <Box>
       <Grid p="1rem" templateColumns={["repeat(2, 2fr)", "repeat(2, 2fr)"]}>
         {products.map((product) => (
           <Link p="2rem" to={`/products/${product.handle}`} key={product.id} margin-left="auto">
