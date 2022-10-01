@@ -55,11 +55,6 @@ const Cart = () => {
                   <Text>{item.variant.price}</Text>
                 </Flex>
 
-                {checkout.totalPrice > 100.00 ? (
-                  <Text>{checkout.totalPrice - (checkout.totalPrice * .1)}</Text>
-                ) : (
-                  <Text>{checkout.totalPrice}</Text>
-                )}
               </Grid>
             )) :
               <Box h="100%" w="100%">
@@ -74,6 +69,13 @@ const Cart = () => {
 
           {checkout.lineItems?.length ?
             <DrawerFooter>
+ {checkout.totalPrice > 100.00 ? (
+                  <Text>Total: {checkout.totalPrice - (checkout.totalPrice * .1)}</Text>
+                ) : (
+                  <Text>Total: {checkout.totalPrice}</Text>
+                )}
+
+
               <Button w="100%">
                 <Link
                   href={checkout.webUrl}>

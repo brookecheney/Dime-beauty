@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Box, Grid, Text, Image, Button, } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import { StarIcon } from "@chakra-ui/icons";
-
 import {
   Popover,
   PopoverTrigger,
@@ -28,31 +27,32 @@ const Home = () => {
   console.log(products);
   if (!products) return <div>Loading...</div>;
   return (
-    <Box>
+    <Box p="1rem">
 
 
-      <Grid templateColumns={["repeat(2, 2fr)", "repeat(2, 2fr)"]}>
+      <Grid p="1rem" templateColumns={["repeat(2, 2fr)", "repeat(2, 2fr)"]}>
         {products.map((product) => (
-          <Link to={`/products/${product.handle}`} key={product.id} margin-left="auto">
+          <Link p="2rem" to={`/products/${product.handle}`} key={product.id} margin-left="auto">
 
 
 
             <Box
               maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden"
               _hover={{ opacity: "80%" }}
-              textAlign="center"
+
+              textAlign="left"
               position="relative"
               width="240px"
               height="400px"
               borderRadius="20px"
             >
               <Image src={product.images[0].src} />
-              <Text position="absolute" p="2rem" bottom="24%" w="100%" fontWeight="bold">
+              <Text textAlign="left" position="absolute" p="1rem" bottom="24%" w="100%" fontWeight="bold">
                 {product.title}
               </Text>
 
 
-              <Box d="flex" p="1rem" mt="2" alignItems="center" bottom="-6%">
+              <Box d="flex" p="2rem" mt="2" alignItems="center" bottom="-6%">
                 {Array(5)
                   .fill("")
                   .map((_, i) => (
@@ -66,15 +66,16 @@ const Home = () => {
 
 
                 </Box>
-
+                <Text fontWeight="bold">${product.variants[0].price}</Text>
               </Box>
-              <Text fontWeight="bold">{product.variants[0].price}</Text>
+
               <Button
 
                 onClick={() => addItemToCheckout(product.variants[0].id, 1)}
                 _hover={{ opacity: "70%" }}
-                w="10rem"
-                bottom="-7%"
+                w="14rem"
+                p="1rem"
+                bottom="3%"
                 backgroundColor="#2d2d2d"
                 color="white"
               >

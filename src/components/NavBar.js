@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Flex, Icon, Image, Box, Badge } from "@chakra-ui/react";
+import { Flex, Icon, Image, Box, Badge, Text } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import { Link } from 'react-router-dom'
 import { MdMenu, MdShoppingBasket } from "react-icons/md";
@@ -20,17 +20,16 @@ const NavBar = () => {
 
       <ChevronLeftIcon size="24px" w={30} h={30} />
 
-      <Link to="/"> Add Product</Link>
+      <Link to="/"><Text fontWeight="bold" size="29px"> Add Product</Text></Link>
       <Box>
         <Icon
-          fill="white"
+          fill="#f3f1ef"
           cursor="pointer"
           as={MdShoppingBasket}
           w={30}
           h={30}
           onClick={() => openCart()}
         />
-        <Badge borderRadius="50%">{checkout.lineItems?.length}</Badge>
       </Box>
     </Flex>
   );
