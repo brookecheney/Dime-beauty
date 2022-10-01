@@ -45,10 +45,10 @@ const Home = () => {
                   borderRadius="20px"
                 >
                   <Image src={product.images[0].src} />
-                  <Text textAlign="left" w="100%" fontWeight="bold">
+                  <Text textAlign="left" ml={1} w="100%" fontWeight="bold">
                     {product.title}
                   </Text>
-                  <Box d="flex" p=".5rem" mt="2" alignItems="center">
+                  <Box d="flex" p=".5rem" alignItems="center">
                     {Array(5)
                       .fill("")
                       .map((_, i) => (
