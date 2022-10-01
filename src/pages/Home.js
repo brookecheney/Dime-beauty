@@ -40,12 +40,12 @@ const Home = () => {
                   _hover={{ opacity: "80%" }}
                   textAlign="left"
                   position="relative"
-                  width="240px"
-                  height="400px"
+                  width="200px"
+                  height="340px"
                   borderRadius="20px"
                 >
                   <Image src={product.images[0].src} />
-                  <Text textAlign="left" position="absolute" p="1rem" bottom="24%" w="100%" fontWeight="bold">
+                  <Text textAlign="left" bottom="24%" w="100%" fontWeight="bold">
                     {product.title}
                   </Text>
                   <Box d="flex" p="2rem" mt="2" alignItems="center" bottom="-6%">
