@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Box, Grid, Text, Image, Button, } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import { StarIcon } from "@chakra-ui/icons";
+import "../components/Footer.css"
 import {
   Popover,
   PopoverTrigger,
@@ -27,7 +28,10 @@ const Home = () => {
   console.log(products);
   if (!products) return <div>Loading...</div>;
   return (
+<div class="wrapper">
     <Box p="1rem">
+            
+           
       <Grid p="1rem" templateColumns={["repeat(2, 2fr)", "repeat(2, 2fr)"]}>
         {products.map((product) => (
           <Link p="2rem" to={`/products/${product.handle}`} key={product.id} margin-left="auto">
@@ -74,8 +78,11 @@ const Home = () => {
           </Link>
         ))}
       </Grid>
-
+    
+            
     </Box>
+    <div class="push"></div>
+    </div>
   );
 };
 

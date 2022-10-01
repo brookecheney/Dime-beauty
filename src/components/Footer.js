@@ -8,12 +8,17 @@ function Footer() {
     return (
         <Box backgroundColor="#f3f1ef">
             <div class="wrapper">
-                <h1 class="h1-1">Add $100 to save 10%</h1>
-                <div class="push">
-                    <Image src={myImage} class="image" />
-                </div>
+            
             </div>
-            <footer class="footer"></footer>
+            <footer class="footer">
+
+            <h1 class="h1-1">Add $100 to save 10%</h1>
+            
+                    <Image src={myImage} class="image" />
+            
+
+
+            </footer>
         </Box>
 
 
