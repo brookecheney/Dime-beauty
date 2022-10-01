@@ -45,10 +45,10 @@ const Home = () => {
                   borderRadius="20px"
                 >
                   <Image src={product.images[0].src} />
-                  <Text textAlign="left" bottom="24%" w="100%" fontWeight="bold">
+                  <Text textAlign="left"  w="100%" fontWeight="bold">
                     {product.title}
                   </Text>
-                  <Box d="flex" p="2rem" mt="2" alignItems="center" bottom="-6%">
+                  <Box d="flex" p=".5rem" mt="2" alignItems="center">
                     {Array(5)
                       .fill("")
                       .map((_, i) => (
@@ -65,9 +65,10 @@ const Home = () => {
                   <Button
                     onClick={() => addItemToCheckout(product.variants[0].id, 1)}
                     _hover={{ opacity: "70%" }}
-                    w="14rem"
-                    p="1rem"
-                    bottom="3%"
+                    w="10rem"
+                    ml={4}
+               
+                    
                     backgroundColor="#2d2d2d"
                     color="white"
                   >
