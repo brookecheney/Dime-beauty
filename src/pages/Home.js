@@ -28,18 +28,12 @@ const Home = () => {
   if (!products) return <div>Loading...</div>;
   return (
     <Box p="1rem">
-
-
       <Grid p="1rem" templateColumns={["repeat(2, 2fr)", "repeat(2, 2fr)"]}>
         {products.map((product) => (
           <Link p="2rem" to={`/products/${product.handle}`} key={product.id} margin-left="auto">
-
-
-
             <Box
               maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden"
               _hover={{ opacity: "80%" }}
-
               textAlign="left"
               position="relative"
               width="240px"
@@ -50,8 +44,6 @@ const Home = () => {
               <Text textAlign="left" position="absolute" p="1rem" bottom="24%" w="100%" fontWeight="bold">
                 {product.title}
               </Text>
-
-
               <Box d="flex" p="2rem" mt="2" alignItems="center" bottom="-6%">
                 {Array(5)
                   .fill("")
@@ -63,12 +55,9 @@ const Home = () => {
                   ))}
                 <Box as="span" h={8} ml="2" color="#2d2d2d" fontSize="sm">
                   7 reviews
-
-
                 </Box>
                 <Text fontWeight="bold">${product.variants[0].price}</Text>
               </Box>
-
               <Button
                 onClick={() => addItemToCheckout(product.variants[0].id, 1)}
                 _hover={{ opacity: "70%" }}
@@ -80,7 +69,6 @@ const Home = () => {
               >
                 Add To Bundle
               </Button>
-
             </Box>
 
           </Link>

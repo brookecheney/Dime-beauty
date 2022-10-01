@@ -7,7 +7,7 @@ const About = () => {
     <Box p="2rem">
       <Grid m="auto">
         <Flex justifyContent="center" alignItems="center">
-      
+
         </Flex>
       </Grid>
     </Box>
