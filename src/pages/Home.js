@@ -45,7 +45,7 @@ const Home = () => {
                   borderRadius="20px"
                 >
                   <Image src={product.images[0].src} />
-                  <Text textAlign="left"  w="100%" fontWeight="bold">
+                  <Text textAlign="left" w="100%" fontWeight="bold">
                     {product.title}
                   </Text>
                   <Box d="flex" p=".5rem" mt="2" alignItems="center">
@@ -67,8 +67,8 @@ const Home = () => {
                     _hover={{ opacity: "70%" }}
                     w="10rem"
                     ml={4}
-               
-                    
+
+
                     backgroundColor="#2d2d2d"
                     color="white"
                   >

@@ -1,5 +1,5 @@
 import React from "react";
-import ImageWithText from "../components/ImageWithText";
+
 
 import { Box, Grid, Flex } from "@chakra-ui/react";
 const About = () => {

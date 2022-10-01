@@ -21,10 +21,10 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/About">
-            <About/>
+            <About />
           </Route>
         </Switch>
-     
+
       </Router>
     </div>
   );
