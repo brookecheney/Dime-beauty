@@ -36,7 +36,6 @@ const ProductPage = () => {
         >
           <Heading pb="2rem">{product.title}</Heading>
           <Text fontWeight="bold">{product.variants[0].price}</Text>
-
           <Button
             onClick={() => addItemToCheckout(product.variants[0].id, 1)}
             _hover={{ opacity: "70%" }}

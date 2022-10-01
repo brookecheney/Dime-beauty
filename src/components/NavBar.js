@@ -16,10 +16,7 @@ const NavBar = () => {
       justifyContent="space-between"
       p="2rem"
     >
-
-
       <ChevronLeftIcon size="24px" w={30} h={30} />
-
       <Link to="/"><Text class="header-text" fontWeight="bold" size="29px"> Add Product</Text></Link>
       <Box>
         <Icon

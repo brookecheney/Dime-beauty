@@ -68,33 +68,21 @@ const Home = () => {
                     w="10rem"
                     ml={4}
 
-
                     backgroundColor="#2d2d2d"
                     color="white"
                   >
                     Add To Bundle
                   </Button>
                 </Box>
-
               </Link>
-
             ))}
-
           </Grid>
         </Box>
-
       </main>
-
       <footer class="footer">
-
         <h1 class="h1-1">Add $100 to save 10%</h1>
-
         <Image src={myImage} class="image" />
-
-
-
       </footer>
-
     </body>
   );
 };
