@@ -3,7 +3,7 @@ import { Flex, Icon, Image, Box, Badge, Text } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import { Link } from 'react-router-dom'
 import { MdMenu, MdShoppingBasket } from "react-icons/md";
-
+import "./Footer.css"
 import { ChevronLeftIcon } from '@chakra-ui/icons'
 
 const NavBar = () => {
@@ -20,7 +20,7 @@ const NavBar = () => {
 
       <ChevronLeftIcon size="24px" w={30} h={30} />
 
-      <Link to="/"><Text fontWeight="bold" size="29px"> Add Product</Text></Link>
+      <Link to="/"><Text class="header-text" fontWeight="bold" size="29px"> Add Product</Text></Link>
       <Box>
         <Icon
           fill="#f3f1ef"

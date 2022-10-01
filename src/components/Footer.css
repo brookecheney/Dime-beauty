@@ -27,7 +27,11 @@ body {
 
 
 }
+.header-text {
+    font-size: 22px;   
+    font-weight: 500;
 
+}
 .image {
     width: 80%;
     padding-left: 80px;
