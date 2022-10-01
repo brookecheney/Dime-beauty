@@ -4,12 +4,11 @@ import { Box, Grid, Text, Image, Button, } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import { StarIcon } from "@chakra-ui/icons";
 import "../components/Footer.css"
+import myImage from '../components/progressbar.png'
 import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  PopoverHeader,
-  PopoverBody,
   PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
@@ -28,7 +27,8 @@ const Home = () => {
   console.log(products);
   if (!products) return <div>Loading...</div>;
   return (
-<div class="wrapper">
+    <body>
+  <main>
     <Box p="1rem">
             
            
@@ -76,13 +76,25 @@ const Home = () => {
             </Box>
 
           </Link>
+          
         ))}
+       
       </Grid>
-    
-            
-    </Box>
-    <div class="push"></div>
-    </div>
+      </Box>
+   
+    </main>
+
+     <footer class="footer">
+
+     <h1 class="h1-1">Add $100 to save 10%</h1>
+     
+     <Image src={myImage} class="image" />
+     
+     
+     
+     </footer>
+
+     </body>
   );
 };
 
