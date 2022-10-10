@@ -79,6 +79,7 @@ const Home = () => {
           </Grid>
         </Box>
       </main>
+
       <footer class="footer">
         <h1 class="h1-1">Add $100 to save 10%</h1>
         <Image src={myImage} class="image" />

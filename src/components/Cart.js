@@ -67,13 +67,13 @@ const Cart = () => {
 
           </DrawerBody>
 
-          {checkout.lineItems?.length ?
+           {checkout.lineItems?.length ? 
             <DrawerFooter>
- {checkout.totalPrice > 100.00 ? (
-                  <Text>Total: {checkout.totalPrice - (checkout.totalPrice * .1)}</Text>
-                ) : (
-                  <Text>Total: {checkout.totalPrice}</Text>
-                )}
+              {checkout.totalPrice > 100.00 ? (
+                <Text>Total: {checkout.totalPrice - (checkout.totalPrice * .1)}</Text>
+              ) : (
+                <Text>Total: {checkout.totalPrice}</Text>
+              )}
 
 
               <Button w="100%">
@@ -82,8 +82,9 @@ const Cart = () => {
                   Checkout
                 </Link>
               </Button>
-            </DrawerFooter> : null
-          }
+            </DrawerFooter> 
+           : null
+              }
 
         </DrawerContent>
       </Drawer>

@@ -29,33 +29,48 @@ class ShopProvider extends Component {
 
 
   // Add a discount code to the checkout
-addDiscount = async (checkoutId, discountCode) => {
-  const checkout = await client.checkout.addDiscount(checkoutId, discountCode);
-  client.checkout.addDiscount(checkoutId, discountCode).then(checkout => {
-    // Do something with the updated checkout
-    console.log(checkout);
-  });
+  addDiscount = async (checkoutId, discountCode) => {
+    const checkout = await client.checkout.addDiscount(checkoutId, discountCode);
+    client.checkout.addDiscount(checkoutId, discountCode).then(checkout => {
+      // Do something with the updated checkout
+      console.log(checkout);
+    });
 
-}
+  }
 
+  discountCode(checkout) {
+    if (this.checkout.totalPrice > 100) {
+      return this.checkout.totalPrice = (this.props.checkout.totalPrice - (this.props.checkout.totalPrice * .1))
 
+    }
+    else {
+      return checkout.totalPrice = checkout.totalPrice
+
+    }
+
+  }
 
 
 
   createCheckout = async () => {
     const checkout = await client.checkout.create();
     localStorage.setItem("checkout-id", checkout.id);
-    if (checkout.totalPrice > 100 ){
-    return checkout.totalPrice = (checkout.totalPrice - (checkout.totalPrice * .1))}
+    console.log(checkout.totalPrice)
+    if (checkout.totalPrice > 100) {
+      return checkout.totalPrice = (checkout.totalPrice - (checkout.totalPrice * .1))
+    }
     this.setState({ checkout: checkout });
   };
 
   fetchCheckout = (checkoutId) => {
     client.checkout.fetch(checkoutId).then((checkout) => {
-      if (checkout.totalPrice > 100 ){
-        return checkout.totalPrice ==(checkout.totalPrice - (checkout.totalPrice * .1))}
+
 
       this.setState({ checkout: checkout });
+      if (checkout.totalPrice > 100) {
+        return checkout.totalPrice = (checkout.totalPrice - (checkout.totalPrice * .1))
+      }
+      console.log(checkout.totalPrice)
     });
   };
 
@@ -70,8 +85,10 @@ addDiscount = async (checkoutId, discountCode) => {
       this.state.checkout.id,
       lineItemsToAdd
     );
+    // if (checkout.totalPrice > 100) {
+    //   return checkout.totalPrice = (checkout.totalPrice - (checkout.totalPrice * .1))
+    // }
 
- 
     this.setState({ checkout: checkout });
 
     this.openCart();
@@ -101,9 +118,9 @@ addDiscount = async (checkoutId, discountCode) => {
     this.setState({ isCartOpen: true });
   };
 
-  closeMenu = () => { this.setState({ isMenuOpen: false}) };
+  closeMenu = () => { this.setState({ isMenuOpen: false }) };
 
-  openMenu = () => { this.setState({ isMenuOpen: true}) };
+  openMenu = () => { this.setState({ isMenuOpen: true }) };
 
   render() {
     return (
